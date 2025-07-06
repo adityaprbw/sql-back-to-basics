@@ -1,0 +1,49 @@
+<mxfile host="app.diagrams.net" agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/137.0.0.0 Safari/537.36" version="27.2.0">
+  <diagram name="Page-1" id="FoN3hvGE6-KnPfCCd2uY">
+    <mxGraphModel dx="872" dy="1573" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="850" pageHeight="1100" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="Zlhl1udeFGR9XohnhnXy-7" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0.25;entryY=1;entryDx=0;entryDy=0;endArrow=ERoneToMany;endFill=0;" edge="1" parent="1" source="Qz15TsvA-0lUi1sQq2z7-6" target="Qz15TsvA-0lUi1sQq2z7-11">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="Qz15TsvA-0lUi1sQq2z7-6" value="master_hotelrsv" style="swimlane;childLayout=stackLayout;horizontal=1;startSize=50;horizontalStack=0;rounded=1;fontSize=14;fontStyle=0;strokeWidth=2;resizeParent=0;resizeLast=1;shadow=0;dashed=0;align=center;arcSize=4;whiteSpace=wrap;html=1;" parent="1" vertex="1">
+          <mxGeometry x="245" y="100" width="160" height="120" as="geometry" />
+        </mxCell>
+        <mxCell id="Qz15TsvA-0lUi1sQq2z7-7" value="&lt;div&gt;(PK)&amp;nbsp;&lt;span style=&quot;background-color: transparent; color: light-dark(rgb(0, 0, 0), rgb(255, 255, 255));&quot;&gt;productID : varchar(5)&lt;/span&gt;&lt;/div&gt;&lt;div&gt;product : varchar(255)&lt;/div&gt;&lt;div&gt;description: tinytext&lt;/div&gt;&lt;div&gt;price: int unsigned(15)&lt;/div&gt;" style="align=left;strokeColor=none;fillColor=none;spacingLeft=4;spacingRight=4;fontSize=12;verticalAlign=top;resizable=0;rotatable=0;part=1;html=1;whiteSpace=wrap;" parent="Qz15TsvA-0lUi1sQq2z7-6" vertex="1">
+          <mxGeometry y="50" width="160" height="70" as="geometry" />
+        </mxCell>
+        <mxCell id="Qz15TsvA-0lUi1sQq2z7-8" value="master_client" style="swimlane;childLayout=stackLayout;horizontal=1;startSize=50;horizontalStack=0;rounded=1;fontSize=14;fontStyle=0;strokeWidth=2;resizeParent=0;resizeLast=1;shadow=0;dashed=0;align=center;arcSize=4;whiteSpace=wrap;html=1;" parent="1" vertex="1">
+          <mxGeometry x="230" y="260" width="190" height="130" as="geometry" />
+        </mxCell>
+        <mxCell id="Qz15TsvA-0lUi1sQq2z7-9" value="&lt;div&gt;(PK) clientNumber : varchar(10)&lt;/div&gt;&lt;div&gt;clientName : varchar(100)&lt;/div&gt;&lt;div&gt;clientPhone: varchar(15)&lt;/div&gt;&lt;div&gt;clientAddress: tinytext&lt;/div&gt;" style="align=left;strokeColor=none;fillColor=none;spacingLeft=4;spacingRight=4;fontSize=12;verticalAlign=top;resizable=0;rotatable=0;part=1;html=1;whiteSpace=wrap;" parent="Qz15TsvA-0lUi1sQq2z7-8" vertex="1">
+          <mxGeometry y="50" width="190" height="80" as="geometry" />
+        </mxCell>
+        <mxCell id="Qz15TsvA-0lUi1sQq2z7-10" value="transaction_detail" style="swimlane;childLayout=stackLayout;horizontal=1;startSize=50;horizontalStack=0;rounded=1;fontSize=14;fontStyle=0;strokeWidth=2;resizeParent=0;resizeLast=1;shadow=0;dashed=0;align=center;arcSize=4;whiteSpace=wrap;html=1;" parent="1" vertex="1">
+          <mxGeometry x="360" y="-130" width="190" height="140" as="geometry" />
+        </mxCell>
+        <mxCell id="Qz15TsvA-0lUi1sQq2z7-11" value="&lt;div&gt;(PK) invoiceID :&amp;nbsp;&lt;span style=&quot;background-color: transparent; color: light-dark(rgb(0, 0, 0), rgb(255, 255, 255));&quot;&gt;int unsigned(10)&lt;/span&gt;&lt;/div&gt;&lt;div&gt;(PK) productID : varchar(5)&lt;/div&gt;&lt;div&gt;quantity: tinyint unsigned&lt;/div&gt;&lt;div&gt;discount: tinyint unsigned&lt;/div&gt;&lt;div&gt;tax: tinyint unsigned&lt;/div&gt;" style="align=left;strokeColor=none;fillColor=none;spacingLeft=4;spacingRight=4;fontSize=12;verticalAlign=top;resizable=0;rotatable=0;part=1;html=1;whiteSpace=wrap;" parent="Qz15TsvA-0lUi1sQq2z7-10" vertex="1">
+          <mxGeometry y="50" width="190" height="90" as="geometry" />
+        </mxCell>
+        <mxCell id="Zlhl1udeFGR9XohnhnXy-6" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0.75;entryY=1;entryDx=0;entryDy=0;endArrow=ERoneToMany;endFill=0;" edge="1" parent="1" source="Qz15TsvA-0lUi1sQq2z7-12" target="Qz15TsvA-0lUi1sQq2z7-11">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="Qz15TsvA-0lUi1sQq2z7-12" value="transaction_header" style="swimlane;childLayout=stackLayout;horizontal=1;startSize=50;horizontalStack=0;rounded=1;fontSize=14;fontStyle=0;strokeWidth=2;resizeParent=0;resizeLast=1;shadow=0;dashed=0;align=center;arcSize=4;whiteSpace=wrap;html=1;" parent="1" vertex="1">
+          <mxGeometry x="510" y="100" width="210" height="180" as="geometry" />
+        </mxCell>
+        <mxCell id="Qz15TsvA-0lUi1sQq2z7-13" value="&lt;div&gt;companyName : varchar(100)&lt;/div&gt;&lt;div&gt;(PK) invoiceID : int unsigned(10)&lt;/div&gt;&lt;div&gt;invoiceNumber: varchar(15)&lt;/div&gt;&lt;div&gt;invoiceDate: tinytext&lt;br&gt;&lt;span style=&quot;background-color: transparent; color: light-dark(rgb(0, 0, 0), rgb(255, 255, 255));&quot;&gt;dueDate: date&lt;br&gt;notes: varchar(100)&lt;/span&gt;&lt;/div&gt;&lt;div&gt;&lt;span style=&quot;background-color: transparent; color: light-dark(rgb(0, 0, 0), rgb(255, 255, 255));&quot;&gt;tac: tinytext&lt;/span&gt;&lt;/div&gt;&lt;div&gt;&lt;span style=&quot;background-color: transparent; color: light-dark(rgb(0, 0, 0), rgb(255, 255, 255));&quot;&gt;(FK) clientNumber: varchar(10)&amp;nbsp;&lt;/span&gt;&lt;/div&gt;" style="align=left;strokeColor=none;fillColor=none;spacingLeft=4;spacingRight=4;fontSize=12;verticalAlign=top;resizable=0;rotatable=0;part=1;html=1;whiteSpace=wrap;" parent="Qz15TsvA-0lUi1sQq2z7-12" vertex="1">
+          <mxGeometry y="50" width="210" height="130" as="geometry" />
+        </mxCell>
+        <mxCell id="Zlhl1udeFGR9XohnhnXy-2" value="" style="edgeStyle=entityRelationEdgeStyle;fontSize=12;html=1;endArrow=ERoneToMany;rounded=0;exitX=1;exitY=0.5;exitDx=0;exitDy=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" edge="1" parent="1" source="Qz15TsvA-0lUi1sQq2z7-9" target="Qz15TsvA-0lUi1sQq2z7-13">
+          <mxGeometry width="100" height="100" relative="1" as="geometry">
+            <mxPoint x="470" y="390" as="sourcePoint" />
+            <mxPoint x="570" y="290" as="targetPoint" />
+            <Array as="points">
+              <mxPoint x="500" y="330" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>
